@@ -18,8 +18,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 mb-5 text-center">
-            <h1 class="mb-3 bread">Properties</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Properties <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Products</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('index') }}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Products <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -50,51 +50,50 @@
         			</div>
         		</div>
         	</div>
-        	<div class="col-md-4">
-                <div class="property-wrap ftco-animate">
-                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                            <span class="ion-ios-link"></span>
-                        </a>
-                        <div class="list-agent d-flex align-items-center">
-                            
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p class="price mb-3"><span class="orig-price">$3,500,000.00</span></p>
-                        <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
-                        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
-                        <ul class="property_list">
-                            <li><span class="flaticon-bed"></span>3</li>
-                            <li><span class="flaticon-bathtub"></span>2</li>
-                            <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="property-wrap ftco-animate">
-                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                            <span class="ion-ios-link"></span>
-                        </a>
-                        <div class="list-agent d-flex align-items-center">
-                            
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p class="price mb-3"><span class="orig-price">$3,500,000.00</span></p>
-                        <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
-                        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
-                        <ul class="property_list">
-                            <li><span class="flaticon-bed"></span>3</li>
-                            <li><span class="flaticon-bathtub"></span>2</li>
-                            <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+      	  <div class="col-md-4">
+              <div class="property-wrap ftco-animate">
+                  <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
+                      <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+                          <span class="ion-ios-link"></span>
+                      </a>
+                      <div class="list-agent d-flex align-items-center">
+                          
+                      </div>
+                  </div>
+                  <div class="text">
+                      <p class="price mb-3"><span class="orig-price">$3,500,000.00</span></p>
+                      <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
+                      <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
+                      <ul class="property_list">
+                          <li><span class="flaticon-bed"></span>3</li>
+                          <li><span class="flaticon-bathtub"></span>2</li>
+                          <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="property-wrap ftco-animate">
+                  <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
+                      <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+                          <span class="ion-ios-link"></span>
+                      </a>
+                      <div class="list-agent d-flex align-items-center">
+                          
+                      </div>
+                  </div>
+                  <div class="text">
+                      <p class="price mb-3"><span class="orig-price">$3,500,000.00</span></p>
+                      <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
+                      <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
+                      <ul class="property_list">
+                          <li><span class="flaticon-bed"></span>3</li>
+                          <li><span class="flaticon-bathtub"></span>2</li>
+                          <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
         </div>
         <div style="text-align: center;">
           pagination

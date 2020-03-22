@@ -23,6 +23,9 @@ Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/contact-us', 'PagesController@contact')->name('contact');
 
-Auth::routes(['register' => false]);
+Route::prefix('admin')->group(function () {
+   Auth::routes(['register' => false]); 
+   Route::get('/home', 'HomeController@index')->name('home');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+

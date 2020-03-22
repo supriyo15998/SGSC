@@ -258,14 +258,14 @@
         <div class="row">
             <div class="col-md-3 ftco-animate">
                 <div class="agent">
-                        <div class="img">
-                            <img src="images/team-1.jpg" class="img-fluid" alt="Colorlib Template">
-                        </div>
-                        <div class="desc">
-                            <h3><a href="properties.html">Ben Ford</a></h3>
-                                <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">43 Properties</span></p>
-                        </div>
+                    <div class="img">
+                        <img src="images/team-1.jpg" class="img-fluid" alt="Colorlib Template">
                     </div>
+                    <div class="desc">
+                        <h3><a href="properties.html">Ben Ford</a></h3>
+                        <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">43 Properties</span></p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 ftco-animate">
                 <div class="agent">
@@ -274,7 +274,7 @@
                         </div>
                         <div class="desc">
                             <h3><a href="properties.html">John Cooper</a></h3>
-                                <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">28 Properties</span></p>
+                            <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">28 Properties</span></p>
                         </div>
                     </div>
             </div>
