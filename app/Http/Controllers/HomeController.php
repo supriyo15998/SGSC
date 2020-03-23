@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('admin.index');
     }
+    public function viewproduct()
+    {
+        return view('admin.data');
+    }
+    public function addproduct()
+    {
+        return view('admin.general');
+    }
 }

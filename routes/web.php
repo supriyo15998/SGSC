@@ -26,6 +26,8 @@ Route::get('/contact-us', 'PagesController@contact')->name('contact');
 Route::prefix('admin')->group(function () {
    Auth::routes(['register' => false]); 
    Route::get('/home', 'HomeController@index')->name('home');
+   Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
+   Route::get('/view-product', 'HomeController@viewproduct')->name('viewproduct');
 });
 
 
