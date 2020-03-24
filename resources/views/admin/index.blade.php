@@ -18,6 +18,11 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+      @if(session()->has('message'))
+        <div class="alert alert-success" role="alert">
+          {{ session()->get('message') }}
+        </div>
+      @endif
       <h1>
         Dashboard
         <small>Control panel</small>
@@ -36,7 +41,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3>{{ $productCount }}</h3>
 
               <p>Total Products</p>
             </div>
@@ -51,9 +56,9 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>{{ $materialCount }}<!-- <sup style="font-size: 20px">%</sup> --></h3>
 
-              <p>Bounce Rate</p>
+              <p>Total Materials</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>

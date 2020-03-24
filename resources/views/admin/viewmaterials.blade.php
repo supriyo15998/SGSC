@@ -19,84 +19,47 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        General Form Elements
-        <small>Preview</small>
+        All Materials
+        
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">General Elements</li>
+        <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">View Materials</a></li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <!-- left column -->
-        <div class="col-md-6">
-          <!-- general form elements -->
-          <div class="box box-primary" style="padding: 4%">
-            <div class="box-header with-border" style="text-align: center; font-weight: bold;">
-              <h3 class="box-title">Quick Example</h3>
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">View All Materials</h3>
             </div>
             <!-- /.box-header -->
-            <!-- form start -->
-            <form method="POST" action="#" enctype="multipart/form-data">
-              <div class="card-body">
-                <div class="form-group">
-                  <label for="package_category">Package Category</label>
-                  <select id="package_category" class="form-control" name="package_category">
-                    <option autofocus disabled>Select Package Category</option>
-                    <option value="adventurous-tour">Adventurous Tour</option>
-                    <option value="trekking">Trekking</option>
-                    <option value="city-tour">City Tour</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="inputName">Package Name</label>
-                  <input type="text" name="package_name" id="inputName" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="amount-per-head">Amount per head</label>
-                  <input id="amount-per-head" name="amount_per_head" type="number" class="form-control">
-                </div>
-               
-                <div class="form-group">
-                  <label for="facilities">Facilities (comma separated)</label>
-                  <input type="text" name="facilities" id="facilities" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="t-date-depart">Tentative Date Departure</label>
-                  <input type="date" name="depart_date" id="t-date-depart" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="t-date-arrival">Tentative Date Arrival</label>
-                  <input type="date" name="arrival_date" id="t-date-arrival" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="number" name="days"><b>Days</b> <input type="number" name="nights"><b>Nights</b>
-                </div>
-                <div class="form-group d-flex flex-column">
-                  <label for="image">Upload Photo</label>
-                  <input type="file" id="image" name="image">
-                </div>
-                <div class="form-group d-flex flex-column">
-                  <input type="submit" name="create_package" class="btn btn-success" value="Add New Package">
-                </div>
-              </div>
-            <form>
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Material Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                  @foreach($materials as $material)
+                    <tr>
+                      <td>{{ $material->id }}</td>
+                      <td>{{ $material->name }}</td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <!--/.col (left) -->
-        <!-- right column -->
-
-        <!--/.col (right) -->
       </div>
-      <!-- /.row -->
     </section>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
@@ -303,5 +266,7 @@
 
 <!-- jQuery 3 -->
 @include('adminLayouts.js')
+<!-- page script -->
+
 </body>
 </html>

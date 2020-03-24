@@ -27,7 +27,11 @@ Route::prefix('admin')->group(function () {
    Auth::routes(['register' => false]); 
    Route::get('/home', 'HomeController@index')->name('home');
    Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
+   Route::post('post-product', 'HomeController@postproduct')->name('postproduct');
    Route::get('/view-product', 'HomeController@viewproduct')->name('viewproduct');
+   Route::get('/add-material', 'HomeController@addmaterial')->name('addmaterial');
+   Route::post('/post-material', 'HomeController@postmaterial')->name('postmaterial');
+   Route::get('view-material', 'HomeController@viewmaterial')->name('viewmaterial');
 });
 
 
