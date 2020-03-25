@@ -81,7 +81,7 @@
                 </div> -->
                 <div class="form-group">
                   <label for="product_material">Product Material</label>
-                  <select id="product_material" class="form-control" name="material">
+                  <select id="product_material" class="form-control" name="material_id">
                     <option selected disabled>Select Product Material</option>
                     @foreach($materials as $material)
                       <option value="{{ $material->id }}">{{ $material->name }}</option>

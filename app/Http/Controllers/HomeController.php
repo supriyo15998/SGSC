@@ -48,7 +48,7 @@ class HomeController extends Controller
             'height' => 'required',
             'width' => 'required',
             'length' => 'required',
-            'material' => 'required',
+            'material_id' => 'required',
             'weight' => 'required',
             'price' => 'required',
             'image' => 'required'
@@ -61,6 +61,7 @@ class HomeController extends Controller
         Image::make($image)->resize(1000,685)->save($location);
         $product = Product::create($validatedData);
         //$this->storeImage($package); 
+
         $product->update(['image' => $fileName]);
         return redirect('/admin/home')->with('message', 'Product Added Successfully');
     }

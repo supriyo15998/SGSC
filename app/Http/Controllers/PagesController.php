@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Product;
 class PagesController extends Controller
 {
     public function index()
@@ -20,7 +20,9 @@ class PagesController extends Controller
     }
     public function products()
     {
-    	return view('products');
+        $products = Product::all();
+        //dd($products);
+    	return view('products')->withProducts($products);
     }
     public function contact()
     {
