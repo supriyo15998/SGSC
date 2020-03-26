@@ -54,6 +54,19 @@
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Manage Categories</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('addcategory') }}"><i class="fa fa-circle-o"></i> Add New Category</a></li>
+            <li><a href="{{ route('viewcategory') }}"><i class="fa fa-circle-o"></i> View All Categories</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
             <i class="fa fa-table"></i> <span>Tables</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

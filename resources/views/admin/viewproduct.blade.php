@@ -33,59 +33,52 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Hover Data Table</h3>
+          @foreach($categories as $category)
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">{{ $category->name }}</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Height</th>
+                    <th>Width</th>
+                    <th>Length</th>
+                    <th>Material</th>
+                    <th>Weight</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach($category->products as $category->product)
+                    <tr>
+                      <td>{{ $category->product->id }}</td>
+                      <td>{{ $category->product->name }}</td>
+                      <td>{{ $category->product->description }}</td>
+                      <td>{{ $category->product->height }}</td>
+                      <td>{{ $category->product->width }}</td>
+                      <td>{{ $category->product->length }}</td>
+                      <td>{{ $category->product->material->name }}</td>
+                      <td>{{ $category->product->weight }}</td>
+                      <td>{{ $category->product->price }}</td>
+                      <td><img src="{{ asset('img/products/' . $category->product->image) }}" height="100" width="100"></td>
+                    </tr>
+                  @endforeach
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.box-body -->
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
+          @endforeach
           <!-- /.box -->
-
+          
         
-          <!-- /.box -->
         </div>
         <!-- /.col -->
       </div>

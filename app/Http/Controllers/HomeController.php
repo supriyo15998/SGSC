@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Material;
 use App\Product;
+use App\Category;
 use Intervention\Image\Facades\Image;
 class HomeController extends Controller
 {
@@ -27,22 +28,27 @@ class HomeController extends Controller
     {
         $productCount = Product::count();
         $materialCount = Material::count();
-        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount);
+        $categoryCount = Category::count();
+        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount)->withCategoryCount($categoryCount);
     }
     public function viewproduct()
     {
-        return view('admin.viewproduct');
+        $products = Product::all();
+        $categories = Category::all();
+        return view('admin.viewproduct')->withProducts($products)->withCategories($categories);
     }
     public function addproduct()
     {
         $materials = Material::all();
-        return view('admin.addproduct')->withMaterials($materials);
+        $categories = Category::all();
+        //dd($categories);
+        return view('admin.addproduct')->withMaterials($materials)->withCategories($categories);
     }
     public function postproduct(Request $request)
     {
 
         $validatedData = $request->validate([
-            'category' => 'required',
+            'category_id' => 'required',
             'name' => 'required',
             'description' => 'required',
             'height' => 'required',
@@ -82,5 +88,26 @@ class HomeController extends Controller
         $materials = Material::all();
         //dd($materials);
         return view('admin.viewmaterials')->withMaterials($materials);
+    }
+    public function addcategory()
+    {
+        return view('admin.addcategory');
+    }
+    public function postcategory(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required'
+        ]);
+        $slug = str_slug($request->name, "-");
+        
+        $validatedData['slug'] = $slug;
+        //dd($validatedData);
+        $category = Category::create($validatedData);
+        return redirect('/admin/home')->with('message', 'Category Added Successfully');
+    }
+    public function viewcategory()
+    {
+        $categories = Category::all();
+        return view('admin.viewcategory')->withCategories($categories);
     }
 }

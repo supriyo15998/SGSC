@@ -45,11 +45,11 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="product_category">Product Category</label>
-                  <select id="product_category" class="form-control" name="category">
+                  <select id="product_category" class="form-control" name="category_id">
                     <option selected disabled>Select Product Category</option>
-                    <option value="commercial-kitchen-equipment-manufacturing">Commercial Kitchen Equipment Manufacturing</option>
-                    <option value="gas-pipeline">Gas Pipeline</option>
-                    <option value="display-counter">Display Counter</option>
+                    @foreach($categories as $category)
+                      <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                   </select>
                 </div>
 

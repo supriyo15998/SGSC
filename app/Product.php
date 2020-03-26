@@ -12,4 +12,9 @@ class Product extends Model
     {
     	return $this->belongsTo('App\Material');
     }
+
+    public function category()
+    {
+    	return $this->belongsTo('App\Category');
+    }
 }

@@ -32,6 +32,8 @@ Route::prefix('admin')->group(function () {
    Route::get('/add-material', 'HomeController@addmaterial')->name('addmaterial');
    Route::post('/post-material', 'HomeController@postmaterial')->name('postmaterial');
    Route::get('view-material', 'HomeController@viewmaterial')->name('viewmaterial');
+   Route::get('/add-category', 'HomeController@addcategory')->name('addcategory');
+   Route::post('/post-category', 'HomeController@postcategory')->name('postcategory');
+   Route::get('view-category', 'HomeController@viewcategory')->name('viewcategory');
 });
-
 
