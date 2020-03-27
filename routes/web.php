@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/about-us', 'PagesController@about')->name('about');
+Route::get('/gallery', 'PagesController@gallery')->name('gallery');
 Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/contact-us', 'PagesController@contact')->name('contact');
