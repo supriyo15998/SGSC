@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
 class PagesController extends Controller
 {
     public function index()
@@ -21,8 +22,8 @@ class PagesController extends Controller
     public function products()
     {
         $products = Product::all();
-        //dd($products);
-    	return view('products')->withProducts($products);
+        $categories = Category::all();
+    	return view('products')->withProducts($products)->withCategories($categories);
     }
     public function contact()
     {
