@@ -43,6 +43,7 @@
     			@foreach($galleries as $gallery)
             <div class="col-md-4">
               <a href="{{ asset('img/gallery/' . $gallery->image) }}" data-lightbox="mygallery" data-title="{{ $gallery->name }}"><img src="{{ asset('img/gallery/thumbnails/' . $gallery->thumbnail) }}"></a>
+              <p style="font-family: serif; font-weight: bold;">{{ $gallery->name }}</p>
             </div>
           @endforeach
     		</div>
