@@ -43,6 +43,8 @@
                 <tr>
                   <th>ID</th>
                   <th>Category Name</th>
+                  <th>Edit Action</th>
+                  <th>Delete Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +52,14 @@
                     <tr>
                       <td>{{ $category->id }}</td>
                       <td>{{ $category->name }}</td>
+                      <td><a href="{{ route('editcategory', $category->id) }}" class="btn btn-warning">Edit Category</a></td>
+                      <td>
+                        <form method="POST" action="{{ route('deletecategory', $category->id) }}">
+                          @csrf
+                          @method('DELETE')
+                          <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this category?')" name="delete" value="Delete Category">
+                        </form>
+                      </td>
                     </tr>
                   @endforeach
                 </tbody>

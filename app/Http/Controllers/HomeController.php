@@ -30,7 +30,8 @@ class HomeController extends Controller
         $productCount = Product::count();
         $materialCount = Material::count();
         $categoryCount = Category::count();
-        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount)->withCategoryCount($categoryCount);
+        $galleryCount = Gallery::count();
+        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount)->withCategoryCount($categoryCount)->withGalleryCount($galleryCount);
     }
     public function viewproduct()
     {
@@ -90,6 +91,28 @@ class HomeController extends Controller
         //dd($materials);
         return view('admin.viewmaterials')->withMaterials($materials);
     }
+    public function editmaterial($id)
+    {
+        $material = Material::findOrFail($id);
+        return view('admin.editmaterial')->withMaterial($material);
+    }
+    public function posteditmaterial(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required'
+        ]);
+
+        $material = Material::findOrFail($request->id);
+        
+        $material->update($validatedData);
+
+        return redirect('/admin/home')->with('message', 'Material Updated Successfully');
+    }
+    public function deletematerial($id)
+    {
+        $material = Material::findOrFail($id)->delete();
+        return redirect('/admin/home')->with('message', 'Material Deleted Successfully');
+    }
     public function addcategory()
     {
         return view('admin.addcategory');
@@ -105,6 +128,31 @@ class HomeController extends Controller
         //dd($validatedData);
         $category = Category::create($validatedData);
         return redirect('/admin/home')->with('message', 'Category Added Successfully');
+    }
+    public function editcategory($id)
+    {
+        $category = Category::findOrFail($id);
+        return view('admin.editcategory')->withCategory($category);
+    }
+    public function posteditcategory(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required'
+        ]);
+        $slug = str_slug($request->name, "-");
+        
+        $validatedData['slug'] = $slug;
+
+        $category = Category::findOrFail($request->id);
+        
+        $category->update($validatedData);
+
+        return redirect('/admin/home')->with('message', 'Category Updated Successfully');
+    }
+    public function deletecategory($id)
+    {
+        $category = Category::findOrFail($id)->delete();
+        return redirect('/admin/home')->with('message', 'Category Deleted Successfully');
     }
     public function viewcategory()
     {

@@ -86,9 +86,9 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>{{ $galleryCount }}</h3>
 
-              <p>Unique Visitors</p>
+              <p>Total Photos</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>

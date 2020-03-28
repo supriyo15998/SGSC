@@ -43,6 +43,8 @@
                 <tr>
                   <th>ID</th>
                   <th>Material Name</th>
+                  <th>Edit Action</th>
+                  <th>Delete Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +52,16 @@
                     <tr>
                       <td>{{ $material->id }}</td>
                       <td>{{ $material->name }}</td>
+                      <td>
+                        <a href="{{ route('editmaterial', $material->id) }}" class="btn btn-warning">Edit Material</a>
+                      </td>
+                      <td>
+                        <form method="POST" action="{{ route('deletematerial', $material->id) }}">
+                          @csrf
+                          @method('DELETE')
+                          <input type="submit" onclick="return confirm('Are you sure want to delete this material?')" name="delete" value="Delete Material" class="btn btn-danger">
+                        </form>
+                      </td>
                     </tr>
                   @endforeach
                 </tbody>

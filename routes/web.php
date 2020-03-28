@@ -32,10 +32,16 @@ Route::prefix('admin')->group(function () {
    Route::get('/view-product', 'HomeController@viewproduct')->name('viewproduct');
    Route::get('/add-material', 'HomeController@addmaterial')->name('addmaterial');
    Route::post('/post-material', 'HomeController@postmaterial')->name('postmaterial');
-   Route::get('view-material', 'HomeController@viewmaterial')->name('viewmaterial');
+   Route::get('/view-material', 'HomeController@viewmaterial')->name('viewmaterial');
+   Route::get('/edit-material/{id}', 'HomeController@editmaterial')->name('editmaterial');
+   Route::put('/edit-material/{id}', 'HomeController@posteditmaterial')->name('posteditmaterial');
+   Route::delete('/delete-material/{id}', 'HomeController@deletematerial')->name('deletematerial');
    Route::get('/add-category', 'HomeController@addcategory')->name('addcategory');
    Route::post('/post-category', 'HomeController@postcategory')->name('postcategory');
-   Route::get('view-category', 'HomeController@viewcategory')->name('viewcategory');
+   Route::get('/view-category', 'HomeController@viewcategory')->name('viewcategory');
+   Route::get('/edit-category/{id}', 'HomeController@editcategory')->name('editcategory');
+   Route::put('/edit-category/{id}', 'HomeController@posteditcategory')->name('posteditcategory');
+   Route::delete('/delete-category/{id}', 'HomeController@deletecategory')->name('deletecategory');
    Route::get('/add-photo', 'HomeController@addphoto')->name('addphoto');
    Route::post('/post-photo', 'HomeController@postphoto')->name('postphoto');
    Route::get('/view-photo', 'HomeController@viewphoto')->name('viewphoto');
