@@ -40,21 +40,11 @@
     <div class="gallery">
     	<div class="container">
     		<div class="row">
-    			<div class="col-md-4">
-    				<a href="{{ asset('img/gallery/ch500x500.jpg') }}" data-lightbox="mygallery" data-title="Title 1"><img src="{{ asset('img/gallery/ch250x250.jpg') }}"></a>
-    			</div>
-    			<div class="col-md-4">
-    				<a href="{{ asset('img/gallery/ch500x500.jpg') }}" data-lightbox="mygallery" data-title="Title 2"><img src="{{ asset('img/gallery/ch250x250.jpg') }}"></a>
-    			</div>
-    			<div class="col-md-4">
-    				<a href="{{ asset('img/gallery/ch500x500.jpg') }}" data-lightbox="mygallery" data-title="Title 3"><img src="{{ asset('img/gallery/ch250x250.jpg') }}"></a>
-    			</div>
-    			<div class="col-md-4">
-    				<a href="{{ asset('img/gallery/ch500x500.jpg') }}" data-lightbox="mygallery" data-title="Title 4"><img src="{{ asset('img/gallery/ch250x250.jpg') }}"></a>
-    			</div>
-    			<div class="col-md-4">
-    				<a href="{{ asset('img/gallery/ch500x500.jpg') }}" data-lightbox="mygallery" data-title="Title 5"><img src="{{ asset('img/gallery/ch250x250.jpg') }}"></a>
-    			</div>
+    			@foreach($galleries as $gallery)
+            <div class="col-md-4">
+              <a href="{{ asset('img/gallery/' . $gallery->image) }}" data-lightbox="mygallery" data-title="{{ $gallery->name }}"><img src="{{ asset('img/gallery/thumbnails/' . $gallery->thumbnail) }}"></a>
+            </div>
+          @endforeach
     		</div>
     	</div>
     </div>

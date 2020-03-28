@@ -36,5 +36,9 @@ Route::prefix('admin')->group(function () {
    Route::get('/add-category', 'HomeController@addcategory')->name('addcategory');
    Route::post('/post-category', 'HomeController@postcategory')->name('postcategory');
    Route::get('view-category', 'HomeController@viewcategory')->name('viewcategory');
+   Route::get('/add-photo', 'HomeController@addphoto')->name('addphoto');
+   Route::post('/post-photo', 'HomeController@postphoto')->name('postphoto');
+   Route::get('/view-photo', 'HomeController@viewphoto')->name('viewphoto');
+   Route::delete('/delete-photo/{id}', 'HomeController@deletephoto')->name('deletephoto');
 });
 

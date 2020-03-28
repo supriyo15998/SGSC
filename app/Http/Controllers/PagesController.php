@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Gallery;
 use App\Category;
 class PagesController extends Controller
 {
@@ -17,7 +18,8 @@ class PagesController extends Controller
     }
     public function gallery()
     {
-        return view('gallery');
+        $galleries = Gallery::all();
+        return view('gallery')->withGalleries($galleries);
     }
     public function services()
     {

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Material;
 use App\Product;
 use App\Category;
+use App\Gallery;
 use Intervention\Image\Facades\Image;
 class HomeController extends Controller
 {
@@ -109,5 +110,60 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         return view('admin.viewcategory')->withCategories($categories);
+    }
+    public function addphoto()
+    {
+        return view('admin.addphoto');
+    }
+    public function viewphoto()
+    {
+        $galleries = Gallery::all();
+        //dd($galleries);
+        return view('admin.viewphoto')->withGalleries($galleries);
+    }
+    public function postphoto(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'image' => 'required|file'
+        ]);
+
+        $filenamewithextension = $request->file('image')->getClientOriginalName();
+        
+        $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+        $extension = $request->file('image')->getClientOriginalExtension();
+
+        $filenametostore = $filename . '_' . time() . '.' . $extension;
+
+        $thumbnail = $filename . '_thumbnail_' . time() . '.' . $extension;
+        
+        $originalLocation = public_path('img/gallery/' . $filenametostore);
+        
+        $thumbnailLocation = public_path('img/gallery/thumbnails/' . $thumbnail);
+
+        Image::make($request->file('image'))->save($originalLocation);
+
+        $img = Image::make($request->file('image'))->resize(250,250, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+
+        $img->save($thumbnailLocation);
+
+        //$this->createThumbnail($thumbnailLocation, 250, 250);
+
+        $gallery = Gallery::create($validatedData);
+
+        $gallery->update(['image' => $filenametostore, 'thumbnail' => $thumbnail]);
+
+        //$gallery->update(['thumbnail' => $thumbnail]);
+
+        return redirect('/admin/home')->with('message', 'Photo Added Successfully');
+
+    }
+    public function deletephoto($id)
+    {
+        $photo = Gallery::findOrFail($id)->delete();
+        return redirect('/admin/home')->with('message', 'Photo Deleted Successfully');
     }
 }
