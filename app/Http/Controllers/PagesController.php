@@ -10,7 +10,9 @@ class PagesController extends Controller
 {
     public function index()
     {
-    	return view('welcome');
+        $latestProducts = Product::orderBy('id', 'desc')->take(3)->get();
+        //dd($latestProducts);
+    	return view('welcome')->withLatestProducts($latestProducts);
     }
     public function about()
     {

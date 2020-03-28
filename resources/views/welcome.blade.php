@@ -39,108 +39,36 @@
             <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
             <span class="subheading">What we offer</span>
-            <h2 class="mb-2">Exclusive Offer For You</h2>
+            <h2 class="mb-2">Latest Products For You</h2>
           </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="property-wrap ftco-animate">
-                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                            <span class="ion-ios-link"></span>
-                        </a>
-                        <div class="list-agent d-flex align-items-center">
-                            <a href="#" class="agent-info d-flex align-items-center">
-                                <div class="img-2 rounded-circle" style="background-image: url(images/person_1.jpg);"></div>
-                                <h3 class="mb-0 ml-2">Ben Ford</h3>
+            @foreach($latestProducts as $latestProduct)
+                <div class="col-md-4">
+                    <div class="property-wrap ftco-animate">
+                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url('img/products/{{ $latestProduct->image }}');">
+                            <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+                                <span class="ion-ios-link"></span>
                             </a>
-                            <div class="tooltip-wrap d-flex">
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                                    <span class="ion-ios-heart"><i class="sr-only">Bookmark</i></span>
-                                </a>
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Compare">
-                                    <span class="ion-ios-eye"><i class="sr-only">Compare</i></span>
-                                </a>
-                            </div>
+                        </div>
+                        <div class="text">
+                            <p class="price mb-3"><!-- <span class="old-price">800,000</span> --><span class="orig-price">₹ {{ $latestProduct->price }}</span></p>
+                            <h3 class="mb-0"><a href="properties-single.html">{{ $latestProduct->name }}</a></h3>
+                            <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ $latestProduct->description }}</span>
+                            <ul class="property_list">
+                                <li><span>Height: </span>{{ $latestProduct->height }}</li>
+                                <li><span>Width: </span>{{ $latestProduct->width }}</li>
+                                <li><span>Length: </span>{{ $latestProduct->length }}</li>
+                                <li><span>Material: </span>{{ $latestProduct->material->name }}</li>
+                                <li><span>Weight: </span>{{ $latestProduct->weight }}</li>
+                                <li><span>Category: </span>{{ $latestProduct->category->name }}</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="text">
-                        <p class="price mb-3"><span class="old-price">800,000</span><span class="orig-price">$3,050<small>/mo</small></span></p>
-                        <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
-                        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
-                        <ul class="property_list">
-                            <li><span class="flaticon-bed"></span>3</li>
-                            <li><span class="flaticon-bathtub"></span>2</li>
-                            <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="property-wrap ftco-animate">
-                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                            <span class="ion-ios-link"></span>
-                        </a>
-                        <div class="list-agent d-flex align-items-center">
-                            <a href="#" class="agent-info d-flex align-items-center">
-                                <div class="img-2 rounded-circle" style="background-image: url(images/person_1.jpg);"></div>
-                                <h3 class="mb-0 ml-2">Ben Ford</h3>
-                            </a>
-                            <div class="tooltip-wrap d-flex">
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                                    <span class="ion-ios-heart"><i class="sr-only">Bookmark</i></span>
-                                </a>
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Compare">
-                                    <span class="ion-ios-eye"><i class="sr-only">Compare</i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p class="price mb-3"><span class="old-price">800,000</span><span class="orig-price">$3,050<small>/mo</small></span></p>
-                        <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
-                        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
-                        <ul class="property_list">
-                            <li><span class="flaticon-bed"></span>3</li>
-                            <li><span class="flaticon-bathtub"></span>2</li>
-                            <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="property-wrap ftco-animate">
-                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
-                            <span class="ion-ios-link"></span>
-                        </a>
-                        <div class="list-agent d-flex align-items-center">
-                            <a href="#" class="agent-info d-flex align-items-center">
-                                <div class="img-2 rounded-circle" style="background-image: url(images/person_1.jpg);"></div>
-                                <h3 class="mb-0 ml-2">Ben Ford</h3>
-                            </a>
-                            <div class="tooltip-wrap d-flex">
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                                    <span class="ion-ios-heart"><i class="sr-only">Bookmark</i></span>
-                                </a>
-                                <a href="#" class="icon-2 d-flex align-items-center justify-content-center" data-toggle="tooltip" data-placement="top" title="Compare">
-                                    <span class="ion-ios-eye"><i class="sr-only">Compare</i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p class="price mb-3"><span class="old-price">800,000</span><span class="orig-price">$3,050<small>/mo</small></span></p>
-                        <h3 class="mb-0"><a href="properties-single.html">Blue View Home</a></h3>
-                        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>2854 Meadow View Drive, Hartford, USA</span>
-                        <ul class="property_list">
-                            <li><span class="flaticon-bed"></span>3</li>
-                            <li><span class="flaticon-bathtub"></span>2</li>
-                            <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                        </ul>
-                    </div>
-                </div>
+            @endforeach
+            <div class="col-md-12" style="text-align: center;">
+                <a href="{{ route('products') }}" class="btn btn-warning">More Products</a>
             </div>
         </div>
         </div>
