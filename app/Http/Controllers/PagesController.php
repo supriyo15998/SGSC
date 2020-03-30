@@ -41,6 +41,16 @@ class PagesController extends Controller
         //dd($product);
         return view('propertiesSingle')->withProduct($product);
     }
+    public function quotation($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('quotation')->withProduct($product);
+    }
+
+    public function postquotation()
+    {
+
+    }
 
     public function contact()
     {
