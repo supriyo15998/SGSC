@@ -24,7 +24,7 @@ Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/product/{categoryslug}/{id}', 'PagesController@individualproduct')->name('individualproduct');
 Route::get('/contact-us', 'PagesController@contact')->name('contact');
 Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
-Route::get('/quotation', 'PagesController@postquotation')->name('postquotation')
+Route::get('/quotation', 'PagesController@postquotation')->name('postquotation');
 
 Route::prefix('admin')->group(function () {
    Auth::routes(['register' => false]); 

@@ -30,7 +30,7 @@
 
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-6 align-items-stretch d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
+            <form action="{{ route('postquotation') }}" class="bg-light p-5 contact-form">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" placeholder="Your Name">
               </div>

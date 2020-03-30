@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Gallery;
 use App\Category;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\QuotationPosted;
 class PagesController extends Controller
 {
     public function index()
@@ -44,12 +46,23 @@ class PagesController extends Controller
     public function quotation($id)
     {
         $product = Product::findOrFail($id);
+        //dd($product);
         return view('quotation')->withProduct($product);
     }
 
-    public function postquotation()
+    public function postquotation(Request $request)
     {
-
+        $validatedData = (object) $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'product' => 'required',
+            'message' => 'required'
+        ]);
+        $product = Product::findOrFail($validatedData->product);
+        $validatedData->product_name = $product->name;
+        //dd($validatedData->product_name);
+        Mail::to('supriyo15998@gmail.com')->send(new QuotationPosted($validatedData));
+        return redirect('/');
     }
 
     public function contact()
