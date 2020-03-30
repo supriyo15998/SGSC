@@ -73,6 +73,51 @@ class HomeController extends Controller
         $product->update(['image' => $fileName]);
         return redirect('/admin/home')->with('message', 'Product Added Successfully');
     }
+    public function editproduct($id)
+    {
+        $materials = Material::all();
+        $categories = Category::all();
+        $product = Product::findOrFail($id);
+        return view('admin.editproduct')->withProduct($product)->withMaterials($materials)->withCategories($categories); //wait let me write something
+    }
+    public function editproductfinal(Request $request, $id)
+    {
+        //write code here
+        $validatedData = $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'height' => 'required',
+            'width' => 'required',
+            'length' => 'required',
+            'material_id' => 'required',
+            'weight' => 'required',
+            'price' => 'required',
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->update($validatedData);
+
+        if($request->hasFile('image')) {
+            // Update Image here
+            //dd('With Image request');
+            $image= $request->file('image');
+            $randomNum = bin2hex(random_bytes(8));
+            $fileName = $validatedData['name'] . time() . '_' . $randomNum . '.jpg';
+            //$fileName = time() . '_' . $randomNum . '.png';
+            $location = public_path('img/products/' . $fileName);
+            Image::make($image)->resize(1000,685)->save($location);
+            $product->update(['image' => $fileName]);
+        }
+
+        return redirect('/admin/home')->with('message', 'Product Updated Successfully');
+
+        // FInally save everything here test
+        // $product->save();
+
+
+    }
+
     public function addmaterial()
     {
         return view('admin.addmaterial');
@@ -84,6 +129,11 @@ class HomeController extends Controller
         ]);
         $material = Material::create($validatedData);
         return redirect('/admin/home')->with('message', 'Material Added Successfully');
+    }
+    public function deleteproduct($id)
+    {
+        $product = Product::findOrFail($id)->delete();
+        return redirect('/admin/home')->with('message', 'Product Deleted Successfully');
     }
     public function viewmaterial()
     {
@@ -214,4 +264,5 @@ class HomeController extends Controller
         $photo = Gallery::findOrFail($id)->delete();
         return redirect('/admin/home')->with('message', 'Photo Deleted Successfully');
     }
+    
 }

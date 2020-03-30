@@ -33,7 +33,7 @@
               	<div class="col-md-4">
               		<div class="property-wrap ftco-animate">
               			<div class="img d-flex align-items-center justify-content-center" style="background-image: url('img/products/{{ $category->product->image }}');">
-              				<a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+              				<a href="{{ route('individualproduct', ['categoryslug' => $category->slug, 'id' => $category->product->id]) }}" class="icon d-flex align-items-center justify-content-center btn-custom">
               					<span class="ion-ios-link"></span>
               				</a>
               				<div class="list-agent d-flex align-items-center">
@@ -42,7 +42,7 @@
               			</div>
               			<div class="text">
               				<p class="price mb-3"><span class="orig-price">Price: ₹ {{ $category->product->price }}</span><br><span class="orig-price">Weight: {{ $category->product->weight }} Kg</span></p>
-              				<h3 class="mb-0"><a href="properties-single.html">{{ $category->product->name }}</a></h3>
+              				<h3 class="mb-0"><a href="{{ route('individualproduct', ['categoryslug' => $category->slug, 'id' => $category->product->id]) }}">{{ $category->product->name }}</a></h3>
               				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ $category->product->description }}</span>
               				<ul class="property_list">
               					<li><span>Height:</span>{{ $category->product->height }}</li>

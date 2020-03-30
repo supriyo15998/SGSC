@@ -33,6 +33,15 @@ class PagesController extends Controller
         $categories = Category::all();
     	return view('products')->withProducts($products)->withCategories($categories);
     }
+
+    public function individualproduct($categoryslug, $id)
+    {
+        //return view('propertiesSingle');
+        $product = Product::findOrFail($id);
+        //dd($product);
+        return view('propertiesSingle')->withProduct($product);
+    }
+
     public function contact()
     {
     	return view('contact');

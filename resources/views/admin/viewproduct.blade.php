@@ -53,6 +53,8 @@
                     <th>Weight</th>
                     <th>Price</th>
                     <th>Image</th>
+                    <th>Edit Action</th>
+                    <th>Delete Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -68,6 +70,14 @@
                       <td>{{ $category->product->weight }}</td>
                       <td>{{ $category->product->price }}</td>
                       <td><img src="{{ asset('img/products/' . $category->product->image) }}" height="100" width="100"></td>
+                      <td><a href="{{ route('editproduct', $category->product->id) }}" class="btn btn-warning">Edit Product</a></td>
+                      <td>
+                        <form method="POST" action="{{ route('deleteproduct', $category->product->id) }}">
+                          @csrf
+                          @method('DELETE')
+                          <input type="submit" onclick="return confirm('Are you sure want to delete this product?')" class="btn btn-danger" name="delete" value="Delete Product">
+                        </form>
+                      </td>
                     </tr>
                   @endforeach
                   </tbody>

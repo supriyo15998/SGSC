@@ -16,13 +16,16 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/about-us', 'PagesController@about')->name('about');
 Route::get('/gallery', 'PagesController@gallery')->name('gallery');
 Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/product/{categoryslug}/{id}', 'PagesController@individualproduct')->name('individualproduct');
 Route::get('/contact-us', 'PagesController@contact')->name('contact');
+Route::get('/test', function() {
+   return view('propertiesSingle');
+});
 
 Route::prefix('admin')->group(function () {
    Auth::routes(['register' => false]); 
@@ -30,6 +33,9 @@ Route::prefix('admin')->group(function () {
    Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
    Route::post('post-product', 'HomeController@postproduct')->name('postproduct');
    Route::get('/view-product', 'HomeController@viewproduct')->name('viewproduct');
+   Route::get('/edit-product/{id}', 'HomeController@editproduct')->name('editproduct');
+   Route::put('/edit-product/{id}', 'HomeController@editproductfinal')->name('editproductfinal');
+   Route::delete('/delete-product/{id}', 'HomeController@deleteproduct')->name('deleteproduct');
    Route::get('/add-material', 'HomeController@addmaterial')->name('addmaterial');
    Route::post('/post-material', 'HomeController@postmaterial')->name('postmaterial');
    Route::get('/view-material', 'HomeController@viewmaterial')->name('viewmaterial');
