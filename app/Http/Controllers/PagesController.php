@@ -8,6 +8,7 @@ use App\Gallery;
 use App\Category;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\QuotationPosted;
+use App\Mail\ContactForm;
 class PagesController extends Controller
 {
     public function index()
@@ -68,5 +69,15 @@ class PagesController extends Controller
     public function contact()
     {
     	return view('contact');
+    }
+    public function contactpost(Request $request)
+    {
+        $validatedData = (object) $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+        Mail::to('supriyo15998@gmail.com')->send(new ContactForm($validatedData));
+        return redirect('/');
     }
 }

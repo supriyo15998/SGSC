@@ -27,10 +27,19 @@
 
     <section class="ftco-section contact-section">
       <div class="container">
-
+        @if($errors->any())
+          <div class="alert alert-danger">
+            <ul> 
+              @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        @endif
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-6 align-items-stretch d-flex">
-            <form action="{{ route('postquotation') }}" class="bg-light p-5 contact-form">
+            <form method="POST" action="{{ route('postquotation') }}" class="bg-light p-5 contact-form">
+              @csrf
               <div class="form-group">
                 <input type="text" name="name" class="form-control" placeholder="Your Name">
               </div>
@@ -40,8 +49,7 @@
               <div class="form-group">
                   <label for="product">Product of Enquiry</label>
                   <select id="product" class="form-control" name="product">
-                    <option selected disabled>Select Product</option>
-                    <option value="{{ $product->id }}">{{ $product->name }}</option>
+                    <option selected value="{{ $product->id }}">{{ $product->name }}</option>
                   </select>
                 </div>
               <div class="form-group">
