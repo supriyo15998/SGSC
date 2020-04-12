@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Gallery;
 use App\Category;
+use App\Testimonial;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\QuotationPosted;
 use App\Mail\ContactForm;
@@ -19,7 +20,8 @@ class PagesController extends Controller
     }
     public function about()
     {
-    	return view('about');
+        $testimonials = Testimonial::all();
+    	return view('about')->withTestimonials($testimonials);
     }
     public function gallery()
     {

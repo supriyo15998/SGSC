@@ -113,53 +113,23 @@
           </div>
         </div>
         <div class="row ftco-animate">
-          <div class="col-md-12">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
+          @foreach($testimonials as $testimonial)
+          <div class="item">
+            <div class="testimony-wrap py-4">
+              <div class="text">  
+                <div class="d-flex align-items-center">
+                	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                	<div class="pl-3">
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Marketing Manager</span>
                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
                   </div>
                 </div>
               </div>
-              <br>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <br>
+            </div>
           </div>
+          @endforeach  
+          
         </div>
       </div>
     </section>

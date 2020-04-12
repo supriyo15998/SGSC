@@ -52,5 +52,8 @@ Route::prefix('admin')->group(function () {
    Route::post('/post-photo', 'HomeController@postphoto')->name('postphoto');
    Route::get('/view-photo', 'HomeController@viewphoto')->name('viewphoto');
    Route::delete('/delete-photo/{id}', 'HomeController@deletephoto')->name('deletephoto');
+   Route::get('/add-testimonial', 'HomeController@addtestimonial')->name('addtestimonial');
+   Route::post('/post-testimonial', 'HomeController@posttestimonial')->name('posttestimonial');
+   Route::get('/view-testimonial', 'HomeController@viewtestimonial')->name('viewtestimonial');
 });
 

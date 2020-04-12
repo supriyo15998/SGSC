@@ -7,6 +7,7 @@ use App\Material;
 use App\Product;
 use App\Category;
 use App\Gallery;
+use App\Testimonial;
 use Intervention\Image\Facades\Image;
 class HomeController extends Controller
 {
@@ -264,5 +265,33 @@ class HomeController extends Controller
         $photo = Gallery::findOrFail($id)->delete();
         return redirect('/admin/home')->with('message', 'Photo Deleted Successfully');
     }
-    
+    public function addtestimonial()
+    {
+        return view('admin.addtestimonial');
+    }
+    public function posttestimonial(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'organisation' => 'required',
+            'message' => 'required',
+            'image' => 'sometimes|file'
+        ]);
+        $testimonial = Testimonial::create($validatedData);
+        if($request->hasFile('image')) {
+            $image= $request->file('image');
+            $randomNum = bin2hex(random_bytes(8));
+            $fileName = $validatedData['name'] . time() . '_' . $randomNum . '.jpg';
+            $location = public_path('img/testimonials/' . $fileName);
+            Image::make($image)->resize(479,479)->save($location);
+            $testimonial->update(['image' => $fileName]);
+        }
+        return redirect('/admin/home')->with('message', 'Testimonial Added Successfully');   
+    }
+    public function viewtestimonial()
+    {
+        $testimonials = Testimonial::all();
+        //dd($testimonials);
+        return view('admin.viewtestimonial')->withTestimonials($testimonials);
+    }
 }
