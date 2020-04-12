@@ -8222,7 +8222,7 @@ h1, h2, h3, h4, h5,
     opacity: 1;
     background: #fff;
     background: rgba(255, 255, 255, 0.71);
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0) 50%, white 100%);
+    /*background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0) 50%, white 100%);*/
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.71)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, white));
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0) 50%, white 100%);
     background: -o-linear-gradient(top, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0) 50%, white 100%);

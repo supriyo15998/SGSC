@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     @include('layouts.css')
-
+    </style>
   </head>
   <body>
     
@@ -14,15 +14,15 @@
 
     <!-- END nav -->
     
-    <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap" style="background-image: url('images/new_welcome_back.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="overlay-2"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-center align-items-center">
           <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
             <div class="text text-center w-100">
-                <h1 class="mb-4">Find Properties <br>That Make You Money</h1>
-                <p><a href="#" class="btn btn-primary py-3 px-4">Search Properties</a></p>
+                <h1 class="mb-4" style="color: white">Find Products <br>That Suits You Most</h1>
+                <p><a href="{{ asset('brochure/Brochure.pdf') }}" target="_blank" class="btn btn-primary py-3 px-4">Download Brochure</a></p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
                 <div class="col-md-4">
                     <div class="property-wrap ftco-animate">
                         <div class="img d-flex align-items-center justify-content-center" style="background-image: url('img/products/{{ $latestProduct->image }}');">
-                            <a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+                            <a href="{{ route('individualproduct', ['categoryslug' => $latestProduct->category->slug, 'id' => $latestProduct->id]) }}" class="icon d-flex align-items-center justify-content-center btn-custom">
                                 <span class="ion-ios-link"></span>
                             </a>
                         </div>
@@ -86,58 +86,61 @@
         </div>
         <div class="container-fluid px-0">
             <div class="row d-md-flex text-wrapper align-items-stretch">
-                    <div class="one-half mb-md-0 mb-4 img d-flex align-self-stretch" style="background-image: url('images/about.jpg');"></div>
-                    <div class="one-half half-text d-flex justify-content-end align-items-center">
-                        <div class="text-inner pl-md-5">
-                            <div class="row d-flex">
-                      <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-                        <div class="media block-6 services-wrap d-flex">
-                            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
-                          <div class="media-body pl-4">
-                            <h3>No Downpayment</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                          </div>
-                        </div>      
+              <div class="one-half mb-md-0 mb-4 img d-flex align-self-stretch" style="background-image: url('images/about.jpg');">
+              </div>
+              <div class="one-half half-text d-flex justify-content-end align-items-center">
+                  <div class="text-inner pl-md-5">
+                      <div class="row d-flex">
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Cost effectiveness</h3>
+                              <p>All our products and services are cost effective.</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Trust Worthy</h3>
+                              <p>An ISO 9001:2015 Certified Company.</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Reliable approach</h3>
+                              <p>Services provided all over India & outside India</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Timely execution</h3>
+                              <p>Punctuality is our main policy, so we try our best to deliver the product or service as early as possible to the client.</p>
+                            </div>
+                          </div>      
+                        </div>
                       </div>
-                      <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-                        <div class="media block-6 services-wrap d-flex">
-                            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
-                          <div class="media-body pl-4">
-                            <h3>All Cash Offer</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                          </div>
-                        </div>      
-                      </div>
-                      <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-                        <div class="media block-6 services-wrap d-flex">
-                            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
-                          <div class="media-body pl-4">
-                            <h3>Experts in Your Corner</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                          </div>
-                        </div>      
-                      </div>
-                      <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-                        <div class="media block-6 services-wrap d-flex">
-                            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
-                          <div class="media-body pl-4">
-                            <h3>Locked in Pricing</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                          </div>
-                        </div>      
-                      </div>
-                    </div>
+                  </div>
+              </div>
             </div>
-                    </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-        <section class="ftco-counter ftco-section img" id="section-counter">
-            <div class="overlay"></div>
+    <section class="ftco-counter ftco-section img" id="section-counter">
+        <div class="overlay">
+          
+        </div>
         <div class="container">
             <div class="row">
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text text-border d-flex align-items-center">
                 <strong class="number" data-number="150">0</strong>
@@ -145,7 +148,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text text-border d-flex align-items-center">
                 <strong class="number" data-number="150">0</strong>
@@ -153,7 +156,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text text-border d-flex align-items-center">
                 <strong class="number" data-number="209">0</strong>
@@ -161,59 +164,56 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <!-- <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text d-flex align-items-center">
                 <strong class="number" data-number="67">0</strong>
                 <span>Total <br>Branches</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         </div>
     </section>
-
-
-
     <section class="ftco-section ftco-agent">
         <div class="container">
             <div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <span class="subheading">Agents</span>
-            <h2 class="mb-4">Our Agents</h2>
+            <span class="subheading">Team</span>
+            <h2 class="mb-4">Our Team</h2>
           </div>
         </div>
         <div class="row">
             <div class="col-md-4 ftco-animate">
                 <div class="agent">
                     <div class="img">
-                        <img src="{{ asset('images/team-1new.jpeg') }}" class="img-fluid" alt="Colorlib Template">
+                        <img src="{{ asset('images/team-1new.jpg') }}" class="img-fluid" alt="Colorlib Template">
                     </div>
                     <div class="desc">
-                        <h3><a href="properties.html">Person 1</a></h3>
-                        <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">Designation 1</span></p>
+                        <h3>Prabir Sarkar</h3>
+                        <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">CEO</span></p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-2new.jpeg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/team-2new.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
-                            <h3><a href="properties.html">Person 2</a></h3>
-                            <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">Designation 2</span></p>
+                            <h3>Gopen kirtania</h3>
+                            <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">Manager</span></p>
                         </div>
                     </div>
             </div>
             <div class="col-md-4 ftco-animate">
                 <div class="agent">
                         <div class="img">
-                            <img src="{{ asset('images/team-3new.jpeg') }}" class="img-fluid" alt="Colorlib Template">
+                            <img src="{{ asset('images/team-3newtest.jpg') }}" class="img-fluid" alt="Colorlib Template">
                         </div>
                         <div class="desc">
-                            <h3><a href="properties.html">Person 3</a></h3>
-                                <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">Designation 3</span></p>
+                            <h3></h3>
+                            <p class="h-info"><span class="ion-ios-filing icon"></span> <span class="details">Product Architect</span></p>
                         </div>
                     </div>
             </div>

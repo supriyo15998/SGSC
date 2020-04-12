@@ -32,69 +32,72 @@
 					</div>
 					<div class="col-md-6 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">
-	            <h2 class="mb-4">Welcome To Findstate A Real Estate Agency</h2>
+	            <h2 class="mb-4">Welcome To Sarkar Gas Servicing Center</h2>
 
-	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-	            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
-	            <p><a href="#" class="btn btn-primary">Find Properties</a></p>
+	            <p>We are engaged in manufacturing, retailing and wholesaling the best quality Gas Manifolds, Steam Boiler Gas Burner, etc.</p>
+	           
+	            <p><a href="{{ route('products') }}" class="btn btn-primary">View Products</a></p>
 	          </div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="ftco-counter ftco-section ftco-no-pt ftco-no-pb img" id="section-counter">
-    	<div class="container">
-    		<div class="row">
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 py-4 mb-4">
+		<section class="ftco-counter ftco-section img" id="section-counter">
+        <div class="overlay">
+          
+        </div>
+        <div class="container">
+            <div class="row">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
               <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="305">0</strong>
-                <span>Area <br>Population</span>
+                <strong class="number" data-number="150">0</strong>
+                <span>Satisfied <br>Customers</span>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 py-4 mb-4">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
               <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="1090">0</strong>
-                <span>Total <br>Properties</span>
+                <strong class="number" data-number="150">0</strong>
+                <span>Total <br>Installations</span>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 py-4 mb-4">
+          <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
               <div class="text text-border d-flex align-items-center">
                 <strong class="number" data-number="209">0</strong>
                 <span>Average <br>House</span>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 py-4 mb-4">
+          <!-- <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
               <div class="text d-flex align-items-center">
                 <strong class="number" data-number="67">0</strong>
                 <span>Total <br>Branches</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-    	</div>
+        </div>
     </section>
     <section class="ftco-section">
     	<div class="container">
     		<div class="row">
     			<div class="col-md-4">
     				<h3 style="font-weight: 600; font-size: 20px;">Our Mission</h3>
-    				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				<p>We “Sarkar Gas Servicing Center” are a “Sole Proprietorship (Individual) Firm” that started in the year 2000 at Kolkata, (West Bengal, India). Supported by a team of skilled personnel, we are engaged in manufacturing, retailing and wholesaling the best quality Gas Manifolds, Steam Boiler Gas Burner, etc. Under the management of our mentor “Prabir Sarkar (Proprietor)”, we have achieved reputed position in the industry.</p>
     			</div>
     			<div class="col-md-4">
     				<h3 style="font-weight: 600; font-size: 20px;">Our Vission</h3>
-    				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				<p>With our brilliant technical knowledge and expertise, we have emerged as one of the prominent organizations engaged in providing Kitchen Set Up Services. Empowered with well trained and qualified professionals, we also undertake jobs related to the Maintenance and Repairing of the LPG Pipe Lines. Acclaimed in the market for their reliability and effectiveness, these services are offered by us at industry leading prices. Besides this, we are also engaged in manufacturing and supplying of technically superior LPG Corrugation Burners that are widely demanded in different industries.</p>
     			</div>
     			<div class="col-md-4">
     				<h3 style="font-weight: 600; font-size: 20px;">Our Value</h3>
-    				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    				<p>To offer the best products and services, we have developed a sound infrastructure that spreads across a wide area. It is segregated into various departments and units like designing, production, quality testing and warehousing. Each division is installed with all the requisite facilities that help us to ensure smooth and streamlined production process. The unit is designed in such a manner that it ensures that our production mechanisms are foolproof and the best in the industry.</p>
     			</div>
     		</div>
     	</div>
@@ -111,7 +114,6 @@
         </div>
         <div class="row ftco-animate">
           <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
@@ -126,34 +128,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
+              <br>
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
@@ -168,6 +143,7 @@
                   </div>
                 </div>
               </div>
+              <br>
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
@@ -182,7 +158,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+              <br>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+<link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/ico">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/animate.css') }}">

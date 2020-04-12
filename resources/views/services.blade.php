@@ -38,8 +38,8 @@
             <div class="media block-6 services d-block text-center">
             	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
               <div class="media-body py-md-4">
-                <h3>No Downpayment</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Cost Effectiveness</h3>
+                <p>All our products and services are cost effective.</p>
               </div>
             </div>      
           </div>
@@ -47,8 +47,8 @@
             <div class="media block-6 services d-block text-center">
             	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
               <div class="media-body py-md-4">
-                <h3>All Cash Offer</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Trust Worthy</h3>
+                <p>An ISO 9001:2015 Certified Company.</p>
               </div>
             </div>      
           </div>
@@ -56,8 +56,8 @@
             <div class="media block-6 services d-block text-center">
             	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
               <div class="media-body py-md-4">
-                <h3>Experts in Your Corner</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Reliable Approach</h3>
+                <p>Services provided all over India & outside India.</p>
               </div>
             </div>      
           </div>
@@ -65,8 +65,8 @@
             <div class="media block-6 services d-block text-center">
             	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
               <div class="media-body py-md-4">
-                <h3>Lokced in Pricing</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Timely Execution</h3>
+                <p>Punctuality is our main policy, so we try our best to deliver the product or service as early as possible to the client.</p>
               </div>
             </div>      
           </div>
@@ -85,52 +85,53 @@
         </div>
     	</div>
     	<div class="container-fluid px-0">
-    		<div class="row d-md-flex text-wrapper align-items-stretch">
-					<div class="one-half img d-flex align-self-stretch" style="background-image: url('images/about.jpg');"></div>
-					<div class="one-half half-text d-flex justify-content-end align-items-center">
-						<div class="text-inner pl-md-5">
-							<div class="row d-flex">
-			          <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-			            <div class="media block-6 services-wrap d-flex">
-			            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
-			              <div class="media-body pl-4">
-			                <h3>No Downpayment</h3>
-			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-			              </div>
-			            </div>      
-			          </div>
-			          <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-			            <div class="media block-6 services-wrap d-flex">
-			            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
-			              <div class="media-body pl-4">
-			                <h3>All Cash Offer</h3>
-			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-			              </div>
-			            </div>      
-			          </div>
-			          <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-			            <div class="media block-6 services-wrap d-flex">
-			            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
-			              <div class="media-body pl-4">
-			                <h3>Experts in Your Corner</h3>
-			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-			              </div>
-			            </div>      
-			          </div>
-			          <div class="col-md-12 d-flex align-self-stretch ftco-animate">
-			            <div class="media block-6 services-wrap d-flex">
-			            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
-			              <div class="media-body pl-4">
-			                <h3>Locked in Pricing</h3>
-			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-			              </div>
-			            </div>      
-			          </div>
-			        </div>
+            <div class="row d-md-flex text-wrapper align-items-stretch">
+              <div class="one-half mb-md-0 mb-4 img d-flex align-self-stretch" style="background-image: url('images/about.jpg');">
+              </div>
+              <div class="one-half half-text d-flex justify-content-end align-items-center">
+                  <div class="text-inner pl-md-5">
+                      <div class="row d-flex">
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Cost effectiveness</h3>
+                              <p>All our products and services are cost effective.</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Trust Worthy</h3>
+                              <p>An ISO 9001:2015 Certified Company.</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Reliable approach</h3>
+                              <p>Services provided all over India & outside India</p>
+                            </div>
+                          </div>      
+                        </div>
+                        <div class="col-md-12 d-flex align-self-stretch ftco-animate">
+                          <div class="media block-6 services-wrap d-flex">
+                              <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
+                            <div class="media-body pl-4">
+                              <h3>Timely execution</h3>
+                              <p>Punctuality is our main policy, so we try our best to deliver the product or service as early as possible to the client.</p>
+                            </div>
+                          </div>      
+                        </div>
+                      </div>
+                  </div>
+              </div>
             </div>
-					</div>
-    		</div>
-    	</div>
+      </div>
     </section>
 		
 

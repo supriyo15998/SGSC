@@ -55,9 +55,6 @@
               	</div>
               @endforeach
             </div>
-          <div style="text-align: center;">
-            End of each category
-          </div>
       	</div>
       </section>
 		@endforeach
