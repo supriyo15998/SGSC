@@ -60,9 +60,9 @@
                       <td>{{ $testimonial->organisation }}</td>
                       <td>{{ $testimonial->message }}</td>
                       <td><img src="{{ asset('img/testimonials/' . $testimonial->image) }}" height="100" width="100"></td>
-                      <td><a href="#" class="btn btn-warning">Edit Testimonial</a></td>
+                      <td><a href="{{ route('edittestimonial', $testimonial->id) }}" class="btn btn-warning">Edit Testimonial</a></td>
                       <td>
-                        <form method="POST" action="#">
+                        <form method="POST" action="{{ route('deletetestimonial', $testimonial->id) }}">
                           @csrf
                           @method('DELETE')
                           <input type="submit" onclick="return confirm('Are you sure want to delete this product?')" class="btn btn-danger" name="delete" value="Delete Testimonial">

@@ -32,7 +32,8 @@ class HomeController extends Controller
         $materialCount = Material::count();
         $categoryCount = Category::count();
         $galleryCount = Gallery::count();
-        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount)->withCategoryCount($categoryCount)->withGalleryCount($galleryCount);
+        $testimonialCount = Testimonial::count();
+        return view('admin.index')->withMaterialCount($materialCount)->withProductCount($productCount)->withCategoryCount($categoryCount)->withGalleryCount($galleryCount)->withTestimonialCount($testimonialCount);
     }
     public function viewproduct()
     {
@@ -293,5 +294,15 @@ class HomeController extends Controller
         $testimonials = Testimonial::all();
         //dd($testimonials);
         return view('admin.viewtestimonial')->withTestimonials($testimonials);
+    }
+    public function edittestimonial()
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        return view('admin.edittestimonial')->withTestimonial($testimonial);
+    }
+    public function deletetestimonial($id)
+    {
+        $testimonial = Testimonial::findOrFail($id)->delete();
+        return redirect('/admin/home')->with('message', 'Testimonial Deleted Successfully');
     }
 }

@@ -108,28 +108,88 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+            <span class="subheading">Testimonial</span>
             <h2 class="mb-3">Happy Clients</h2>
           </div>
         </div>
         <div class="row ftco-animate">
-          @foreach($testimonials as $testimonial)
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">  
-                <div class="d-flex align-items-center">
-                	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                	<div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              @foreach($testimonials as $testimonial)
+                <div class="item">
+                  <div class="testimony-wrap py-4">
+                    <div class="text">
+                      <p class="mb-4">{{ $testimonial->message }}.</p>
+                      <div class="d-flex align-items-center">
+                        <div class="user-img" style="background-image: url('{{ asset('img/testimonials') . '/' . $testimonial->image }}')"></div>
+                        <div class="pl-3">
+                          <p class="name">{{ $testimonial->name }}</p>
+                          <span class="position">{{ $testimonial->organisation }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              @endforeach
+              <!-- 
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 2</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 3</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 4</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 5</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
-          @endforeach  
-          
         </div>
       </div>
     </section>
