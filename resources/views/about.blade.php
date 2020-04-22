@@ -112,24 +112,19 @@
             <h2 class="mb-3">Happy Clients</h2>
           </div>
         </div>
-        <div class="row ftco-animate">
+        <div class="row">
           @foreach($testimonials as $testimonial)
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">  
-                <div class="d-flex align-items-center">
-                	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                	<div class="pl-3">
-                    <p class="name">Roger Scott</p>
-                    <span class="position">Marketing Manager</span>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                  </div>
-                </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{ asset('public/img/testimonials/' . $testimonial->image) }}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{ $testimonial->name }}</h5>
+                <p class="card-text">{{ $testimonial->organisation }}</p>
+                <p class="card-text">{{ $testimonial->message }}</p>
               </div>
             </div>
           </div>
-          @endforeach  
-          
+          @endforeach   
         </div>
       </div>
     </section>
