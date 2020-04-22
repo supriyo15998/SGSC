@@ -79,15 +79,6 @@
                   <label for="length">Length (In ft and inches)</label>
                   <input type="text" name="length" id="length" class="form-control">
                 </div>
-                <!-- <div class="form-group">
-                  <label for="package_category">Product Size</label>
-                  <select id="package_category" class="form-control" name="package_category">
-                    <option selected disabled>Select Product Size</option>
-                    <option value="H">H</option>
-                    <option value="L">L</option>
-                    <option value="W">W</option>
-                  </select>
-                </div> -->
                 <div class="form-group">
                   <label for="product_material">Product Material</label>
                   <select id="product_material" class="form-control" name="material_id">
@@ -156,5 +147,6 @@
 
 <!-- jQuery 3 -->
 @include('adminLayouts.js')
+
 </body>
 </html>
