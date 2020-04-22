@@ -49,20 +49,21 @@
                 </ul>
               </div>
             @endif
-            <form method="POST" action="#" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('postedittestimonial', $testimonial->id) }}" enctype="multipart/form-data">
               @csrf
+              @method('PUT')
               <div class="card-body">
                 <div class="form-group">
                   <label for="inputName">Customer Name</label>
-                  <input type="text" name="name" value="{{ testimonial->name }}" id="inputName" class="form-control">
+                  <input type="text" name="name" value="{{ $testimonial->name }}" id="inputName" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="inputName">Customer Company Name</label>
-                  <input type="text" name="organisation" value="{{ testimonial->organisation }}" id="inputName" class="form-control">
+                  <input type="text" name="organisation" value="{{ $testimonial->organisation }}" id="inputName" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="unit">Customer Message</label>
-                  <textarea name="message" id="unit" value="{{ testimonial->message }}" class="form-control"></textarea>
+                  <textarea name="message" id="unit" class="form-control">{{ $testimonial->message }}</textarea>
                 </div>
                 
                 <div class="form-group d-flex flex-column">
@@ -70,7 +71,7 @@
                   <input type="file" id="image" name="image">
                 </div>
                 <div class="form-group d-flex flex-column">
-                  <input type="submit" name="create_product" class="btn btn-success" value="Add New Testimonial">
+                  <input type="submit" name="create_product" class="btn btn-success" value="Update Testimonial">
                 </div>
               </div>
             <form>

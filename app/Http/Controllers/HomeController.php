@@ -305,4 +305,24 @@ class HomeController extends Controller
         $testimonial = Testimonial::findOrFail($id)->delete();
         return redirect('/admin/home')->with('message', 'Testimonial Deleted Successfully');
     }
+    public function postedittestimonial(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'organisation' => 'required',
+            'message' => 'required',
+            'image' => 'sometimes|file'
+        ]);
+        $testimonial = Testimonial::findOrFail($id);
+        $testimonial->update($validatedData);
+        if($request->hasFile('image')) {
+            $image= $request->file('image');
+            $randomNum = bin2hex(random_bytes(8));
+            $fileName = $validatedData['name'] . time() . '_' . $randomNum . '.jpg';
+            $location = public_path('img/testimonials/' . $fileName);
+            Image::make($image)->resize(479,479)->save($location);
+            $testimonial->update(['image' => $fileName]);
+        }
+        return redirect('/admin/home')->with('message', 'Testimonial Updated Successfully');
+    }
 }
