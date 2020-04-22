@@ -295,7 +295,7 @@ class HomeController extends Controller
         //dd($testimonials);
         return view('admin.viewtestimonial')->withTestimonials($testimonials);
     }
-    public function edittestimonial()
+    public function edittestimonial($id)
     {
         $testimonial = Testimonial::findOrFail($id);
         return view('admin.edittestimonial')->withTestimonial($testimonial);

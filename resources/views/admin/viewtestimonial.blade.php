@@ -36,7 +36,7 @@
           
             <div class="box">
               <div class="box-header">
-                <h3 class="box-title">HAU</h3>
+                <h3 class="box-title">All Testimonials</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body table-responsive no-padding">
