@@ -25,7 +25,7 @@
   </head>
   <body>
   	@include('layouts.nav')
-  	<section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/back_3.jpg');" data-stellar-background-ratio="0.5">
+  	<section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/back_3-min.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="overlay-2"></div>
       <div class="container">
