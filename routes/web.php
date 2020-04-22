@@ -55,5 +55,7 @@ Route::prefix('admin')->group(function () {
    Route::get('/add-testimonial', 'HomeController@addtestimonial')->name('addtestimonial');
    Route::post('/post-testimonial', 'HomeController@posttestimonial')->name('posttestimonial');
    Route::get('/view-testimonial', 'HomeController@viewtestimonial')->name('viewtestimonial');
+   Route::get('/edit-testimonial/{id}', 'HomeController@edittestimonial')->name('edittestimonial');
+   Route::delete('/delete-testimonial/{id}', 'HomeController@deletetestimonial')->name('deletetestimonial');
 });
 

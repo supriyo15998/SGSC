@@ -12,14 +12,14 @@
 	@include('layouts.nav')
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/back_2-min.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="overlay-2"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 mb-5 text-center">
             <h1 class="mb-3 bread">About Us</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('index') }}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -108,10 +108,11 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
+            <span class="subheading">Testimonial</span>
             <h2 class="mb-3">Happy Clients</h2>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="row">
           @foreach($testimonials as $testimonial)
           <div class="col-md-4">
@@ -121,10 +122,90 @@
                 <h5 class="card-title">{{ $testimonial->name }}</h5>
                 <p class="card-text">{{ $testimonial->organisation }}</p>
                 <p class="card-text">{{ $testimonial->message }}</p>
+=======
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              @foreach($testimonials as $testimonial)
+                <div class="item">
+                  <div class="testimony-wrap py-4">
+                    <div class="text">
+                      <p class="mb-4">{{ $testimonial->message }}.</p>
+                      <div class="d-flex align-items-center">
+                        <div class="user-img" style="background-image: url('{{ asset('img/testimonials') . '/' . $testimonial->image }}')"></div>
+                        <div class="pl-3">
+                          <p class="name">{{ $testimonial->name }}</p>
+                          <span class="position">{{ $testimonial->organisation }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              @endforeach
+              <!-- 
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 2</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+>>>>>>> 02bc6ecb4490382cded0fa89c232a0e6f49d4a80
               </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 3</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 4</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                      <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                      <div class="pl-3">
+                        <p class="name">Roger Scott 5</p>
+                        <span class="position">Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
+<<<<<<< HEAD
           @endforeach   
+=======
+>>>>>>> 02bc6ecb4490382cded0fa89c232a0e6f49d4a80
         </div>
       </div>
     </section>
