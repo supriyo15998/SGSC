@@ -30,7 +30,7 @@ Route::post('/quotation', 'PagesController@postquotation')->name('postquotation'
 Route::domain('admin.sgsc.in')->group(function () {
 
    Route::get('/', function () {
-       return redirect()->route('home');
+       return 'Kya be';
    });
 
    Auth::routes(['register' => false]); 
