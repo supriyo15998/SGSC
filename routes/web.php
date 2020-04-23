@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'PagesController@index')->name('index');
+//Route::get('/', 'PagesController@index')->name('index');
 Route::get('/about-us', 'PagesController@about')->name('about');
 Route::get('/gallery', 'PagesController@gallery')->name('gallery');
 Route::get('/services', 'PagesController@services')->name('services');
@@ -30,7 +30,7 @@ Route::post('/quotation', 'PagesController@postquotation')->name('postquotation'
 Route::domain('admin.sgsc.in')->group(function () {
    Auth::routes(['register' => false]); 
    Route::get('/', function () {
-       return redirect()->route('/add-product');
+       return 'Hi';
    });
    Route::get('/home', 'HomeController@index')->name('home');
    Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
