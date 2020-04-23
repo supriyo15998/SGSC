@@ -28,12 +28,10 @@ Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
 Route::post('/quotation', 'PagesController@postquotation')->name('postquotation');
 
 Route::domain('admin.sgsc.in')->group(function () {
-
+   Auth::routes(['register' => false]); 
    Route::get('/', function () {
        return redirect()->route('/add-product');
    });
-
-   Auth::routes(['register' => false]); 
    Route::get('/home', 'HomeController@index')->name('home');
    Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
    Route::post('post-product', 'HomeController@postproduct')->name('postproduct');
