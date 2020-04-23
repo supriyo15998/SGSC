@@ -28,9 +28,9 @@ Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
 Route::post('/quotation', 'PagesController@postquotation')->name('postquotation');
 
 Route::domain('admin.sgsc.in')->group(function () {
-   
-   Route::get('/', fucntion() { 
-      return redirect('/home'); 
+
+   Route::get('/', function () {
+       return redirect()->route('welcome');
    });
 
    Auth::routes(['register' => false]); 
