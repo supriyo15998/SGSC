@@ -16,21 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-//Route::get('/', 'PagesController@index')->name('index');
-Route::get('/about-us', 'PagesController@about')->name('about');
-Route::get('/gallery', 'PagesController@gallery')->name('gallery');
-Route::get('/services', 'PagesController@services')->name('services');
-Route::get('/products', 'PagesController@products')->name('products');
-Route::get('/product/{categoryslug}/{id}', 'PagesController@individualproduct')->name('individualproduct');
-Route::get('/contact-us', 'PagesController@contact')->name('contact');
-Route::post('/contact-us', 'PagesController@contactpost')->name('contactpost');
-Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
-Route::post('/quotation', 'PagesController@postquotation')->name('postquotation');
 
 Route::domain('admin.sgsc.in')->group(function () {
    Auth::routes(['register' => false]); 
    Route::get('/', function () {
-       return 'Hi';
+       return redirect('/');
    });
    Route::get('/home', 'HomeController@index')->name('home');
    Route::get('/add-product', 'HomeController@addproduct')->name('addproduct');
@@ -63,3 +53,13 @@ Route::domain('admin.sgsc.in')->group(function () {
    Route::delete('/delete-testimonial/{id}', 'HomeController@deletetestimonial')->name('deletetestimonial');
 });
 
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/about-us', 'PagesController@about')->name('about');
+Route::get('/gallery', 'PagesController@gallery')->name('gallery');
+Route::get('/services', 'PagesController@services')->name('services');
+Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/product/{categoryslug}/{id}', 'PagesController@individualproduct')->name('individualproduct');
+Route::get('/contact-us', 'PagesController@contact')->name('contact');
+Route::post('/contact-us', 'PagesController@contactpost')->name('contactpost');
+Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
+Route::post('/quotation', 'PagesController@postquotation')->name('postquotation');
