@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Findstate - Free Bootstrap 4 Template by Colorlib</title>
+    <title>{{ $title }}</title>
     <meta charset="utf-8">
     <style type="text/css">
       .quote{

@@ -14,43 +14,50 @@ class PagesController extends Controller
 {
     public function index()
     {
+        $title = "Home | Sarkar Gas Servicing Center";
         $latestProducts = Product::orderBy('id', 'desc')->take(3)->get();
         //dd($latestProducts);
-    	return view('welcome')->withLatestProducts($latestProducts);
+    	return view('welcome')->withLatestProducts($latestProducts)->withTitle($title);
     }
     public function about()
     {
+        $title = "About Us | Sarkar Gas Servicing Center";
         $testimonials = Testimonial::all();
-    	return view('about')->withTestimonials($testimonials);
+    	return view('about')->withTestimonials($testimonials)->withTitle($title);
     }
     public function gallery()
     {
+        $title = "Gallery | Sarkar Gas Servicing Center";
         $galleries = Gallery::all();
-        return view('gallery')->withGalleries($galleries);
+        return view('gallery')->withGalleries($galleries)->withTitle($title);
     }
     public function services()
     {
-    	return view('services');
+        $title = "Services | Sarkar Gas Servicing Center";
+    	return view('services')->withTitle($title);
     }
     public function products()
     {
+        $title = "Products | Sarkar Gas Servicing Center";
         $products = Product::all();
         $categories = Category::all();
-    	return view('products')->withProducts($products)->withCategories($categories);
+    	return view('products')->withProducts($products)->withCategories($categories)->withTitle($title);
     }
 
     public function individualproduct($categoryslug, $id)
     {
+        $title = "Sarkar Gas Servicing Center";
         //return view('propertiesSingle');
         $product = Product::findOrFail($id);
         //dd($product);
-        return view('propertiesSingle')->withProduct($product);
+        return view('propertiesSingle')->withProduct($product)->withTitle($title);
     }
     public function quotation($id)
     {
+        $title = "Quotation | Sarkar Gas Servicing Center";
         $product = Product::findOrFail($id);
         //dd($product);
-        return view('quotation')->withProduct($product);
+        return view('quotation')->withProduct($product)->withTitle($title);
     }
 
     public function postquotation(Request $request)
@@ -70,7 +77,8 @@ class PagesController extends Controller
 
     public function contact()
     {
-    	return view('contact');
+        $title = "Contact Us | Sarkar Gas Servicing Center";
+    	return view('contact')->withTitle($title);
     }
     public function contactpost(Request $request)
     {
