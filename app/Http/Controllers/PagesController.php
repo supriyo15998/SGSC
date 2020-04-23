@@ -15,7 +15,7 @@ class PagesController extends Controller
     public function index()
     {
         $title = "Home | Sarkar Gas Servicing Center";
-        $latestProducts = Product::orderBy('id', 'desc')->take(3)->get();
+        $latestProducts = Product::where('is_Featured', 1)->get();
         //dd($latestProducts);
     	return view('welcome')->withLatestProducts($latestProducts)->withTitle($title);
     }

@@ -89,6 +89,13 @@
                   </select>
                 </div>
                 <div class="form-group">
+                  <label for="featured">Is this a featured product ?</label><br>
+                  <input type="radio" name="is_Featured" id="no" value="0" checked>
+                  <label for="no">No</label><br>
+                  <input type="radio" name="is_Featured" id="yes" value="1">
+                  <label for="yes">Yes</label><br>
+                </div>
+                <div class="form-group">
                   <label for="weight">Weight (In Kg.)</label>
                   <input type="text" name="weight" class="form-control">
                 </div>

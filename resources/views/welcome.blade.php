@@ -39,7 +39,7 @@
             <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
             <span class="subheading">What we offer</span>
-            <h2 class="mb-2">Latest Products For You</h2>
+            <h2 class="mb-2">Featured Products For You</h2>
           </div>
         </div>
         <div class="row">
@@ -86,7 +86,7 @@
         </div>
         <div class="container-fluid px-0">
             <div class="row d-md-flex text-wrapper align-items-stretch">
-              <div class="one-half mb-md-0 mb-4 img d-flex align-self-stretch" style="background-image: url('images/about.jpg');">
+              <div class="one-half mb-md-0 mb-4 img d-flex align-self-stretch" style="background-image: url('images/Logo.jpg');">
               </div>
               <div class="one-half half-text d-flex justify-content-end align-items-center">
                   <div class="text-inner pl-md-5">

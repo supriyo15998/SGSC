@@ -28,7 +28,7 @@
     <section class="ftco-section ftco-no-pb">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 img img-3 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+					<div class="col-md-6 img img-3 d-flex justify-content-center align-items-center" style="background-image: url(images/back_2-min.jpg);">
 					</div>
 					<div class="col-md-6 wrap-about pl-md-5 ftco-animate">
 	          <div class="heading-section">

@@ -61,8 +61,10 @@ class HomeController extends Controller
             'material_id' => 'required',
             'weight' => 'required',
             'price' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'is_Featured' => 'required'
         ]);
+        //dd($validatedData);
         $image= $request->file('image');
         $randomNum = bin2hex(random_bytes(8));
         $fileName = $validatedData['name'] . time() . '_' . $randomNum . '.jpg';
