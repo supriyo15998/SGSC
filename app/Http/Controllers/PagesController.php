@@ -75,9 +75,9 @@ class PagesController extends Controller
         return redirect('/');
     }
 
-    public function contact()
+    public function contact() {
     
-        $title = "Contact Us | Sarkar Gas Servicing Cener";
+        $title = "Contact Us | Sarkar Gas Servicing Center";
     	return view('contact')->withTitle($title);
     }
     public function contactpost(Request $request)
