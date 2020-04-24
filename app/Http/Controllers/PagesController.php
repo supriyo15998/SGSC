@@ -76,8 +76,8 @@ class PagesController extends Controller
     }
 
     public function contact()
-    {
-        $title = "Contact Us | Sarkar Gas Servicing Center";
+    
+        $title = "Contact Us | Sarkar Gas Servicing Cener";
     	return view('contact')->withTitle($title);
     }
     public function contactpost(Request $request)
