@@ -71,7 +71,7 @@ class PagesController extends Controller
         $product = Product::findOrFail($validatedData->product);
         $validatedData->product_name = $product->name;
         //dd($validatedData->product_name);
-        Mail::to('supriyo15998@gmail.com')->send(new QuotationPosted($validatedData));
+        Mail::to('prabirsarkar6030@gmail.com')->send(new QuotationPosted($validatedData));
         return redirect('/');
     }
 
@@ -87,7 +87,7 @@ class PagesController extends Controller
             'email' => 'required',
             'message' => 'required'
         ]);
-        Mail::to('supriyo15998@gmail.com')->send(new ContactForm($validatedData));
+        Mail::to('prabirsarkar6030@gmail.com')->send(new ContactForm($validatedData));
         return redirect('/');
     }
 }
