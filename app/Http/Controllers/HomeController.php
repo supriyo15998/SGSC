@@ -75,7 +75,7 @@ class HomeController extends Controller
         //$this->storeImage($package); 
 
         $product->update(['image' => $fileName]);
-        return redirect('/admin/home')->with('message', 'Product Added Successfully');
+        return redirect('/home')->with('message', 'Product Added Successfully');
     }
     public function editproduct($id)
     {
@@ -114,7 +114,7 @@ class HomeController extends Controller
             $product->update(['image' => $fileName]);
         }
 
-        return redirect('/admin/home')->with('message', 'Product Updated Successfully');
+        return redirect('/home')->with('message', 'Product Updated Successfully');
 
         // FInally save everything here test
         // $product->save();
@@ -132,12 +132,12 @@ class HomeController extends Controller
             'name' => 'required'
         ]);
         $material = Material::create($validatedData);
-        return redirect('/admin/home')->with('message', 'Material Added Successfully');
+        return redirect('/home')->with('message', 'Material Added Successfully');
     }
     public function deleteproduct($id)
     {
         $product = Product::findOrFail($id)->delete();
-        return redirect('/admin/home')->with('message', 'Product Deleted Successfully');
+        return redirect('/home')->with('message', 'Product Deleted Successfully');
     }
     public function viewmaterial()
     {
@@ -160,12 +160,12 @@ class HomeController extends Controller
         
         $material->update($validatedData);
 
-        return redirect('/admin/home')->with('message', 'Material Updated Successfully');
+        return redirect('/home')->with('message', 'Material Updated Successfully');
     }
     public function deletematerial($id)
     {
         $material = Material::findOrFail($id)->delete();
-        return redirect('/admin/home')->with('message', 'Material Deleted Successfully');
+        return redirect('/home')->with('message', 'Material Deleted Successfully');
     }
     public function addcategory()
     {
@@ -181,7 +181,7 @@ class HomeController extends Controller
         $validatedData['slug'] = $slug;
         //dd($validatedData);
         $category = Category::create($validatedData);
-        return redirect('/admin/home')->with('message', 'Category Added Successfully');
+        return redirect('/home')->with('message', 'Category Added Successfully');
     }
     public function editcategory($id)
     {
@@ -201,12 +201,12 @@ class HomeController extends Controller
         
         $category->update($validatedData);
 
-        return redirect('/admin/home')->with('message', 'Category Updated Successfully');
+        return redirect('/home')->with('message', 'Category Updated Successfully');
     }
     public function deletecategory($id)
     {
         $category = Category::findOrFail($id)->delete();
-        return redirect('/admin/home')->with('message', 'Category Deleted Successfully');
+        return redirect('/home')->with('message', 'Category Deleted Successfully');
     }
     public function viewcategory()
     {
@@ -260,13 +260,13 @@ class HomeController extends Controller
 
         //$gallery->update(['thumbnail' => $thumbnail]);
 
-        return redirect('/admin/home')->with('message', 'Photo Added Successfully');
+        return redirect('/home')->with('message', 'Photo Added Successfully');
 
     }
     public function deletephoto($id)
     {
         $photo = Gallery::findOrFail($id)->delete();
-        return redirect('/admin/home')->with('message', 'Photo Deleted Successfully');
+        return redirect('/home')->with('message', 'Photo Deleted Successfully');
     }
     public function addtestimonial()
     {
@@ -289,7 +289,7 @@ class HomeController extends Controller
             Image::make($image)->resize(479,479)->save($location);
             $testimonial->update(['image' => $fileName]);
         }
-        return redirect('/admin/home')->with('message', 'Testimonial Added Successfully');   
+        return redirect('/home')->with('message', 'Testimonial Added Successfully');   
     }
     public function viewtestimonial()
     {
@@ -305,7 +305,7 @@ class HomeController extends Controller
     public function deletetestimonial($id)
     {
         $testimonial = Testimonial::findOrFail($id)->delete();
-        return redirect('/admin/home')->with('message', 'Testimonial Deleted Successfully');
+        return redirect('/home')->with('message', 'Testimonial Deleted Successfully');
     }
     public function postedittestimonial(Request $request, $id)
     {
@@ -325,6 +325,6 @@ class HomeController extends Controller
             Image::make($image)->resize(479,479)->save($location);
             $testimonial->update(['image' => $fileName]);
         }
-        return redirect('/admin/home')->with('message', 'Testimonial Updated Successfully');
+        return redirect('/home')->with('message', 'Testimonial Updated Successfully');
     }
 }
