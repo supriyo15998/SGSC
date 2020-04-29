@@ -23,6 +23,11 @@
           {{ session()->get('message') }}
         </div>
       @endif
+      @if(session()->has('message'))
+        <div class="alert alert-success" role="alert">
+          {{ session()->get('message') }}
+        </div>
+      @endif
       <h1>
         Dashboard
         <small>Control panel</small>
