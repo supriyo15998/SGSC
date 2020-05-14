@@ -53,7 +53,7 @@
                         </div>
                         <div class="text">
                             <p class="price mb-3"><!-- <span class="old-price">800,000</span> --><span class="orig-price">₹ {{ $latestProduct->price }}</span></p>
-                            <h3 class="mb-0"><a href="properties-single.html">{{ $latestProduct->name }}</a></h3>
+                            <h3 class="mb-0"><a href="{{ route('individualproduct', ['categoryslug' => $latestProduct->category->slug, 'id' => $latestProduct->id]) }}">{{ $latestProduct->name }}</a></h3>
                             <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ $latestProduct->description }}</span>
                             <ul class="property_list">
                                 <li><span>Height: </span>{{ $latestProduct->height }}</li>
