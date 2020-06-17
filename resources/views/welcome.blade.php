@@ -47,13 +47,13 @@
                 <div class="col-md-4">
                     <div class="property-wrap ftco-animate">
                         <div class="img d-flex align-items-center justify-content-center" style="background-image: url('img/products/{{ $latestProduct->image }}');">
-                            <a href="{{ route('individualproduct', ['categoryslug' => $latestProduct->category->slug, 'id' => $latestProduct->id]) }}" class="icon d-flex align-items-center justify-content-center btn-custom">
+                            <a href="{{ route('individualproduct', ['categoryslug' => $latestProduct->category->slug, 'productslug' => $latestProduct->slug]) }}" class="icon d-flex align-items-center justify-content-center btn-custom">
                                 <span class="ion-ios-link"></span>
                             </a>
                         </div>
                         <div class="text">
                             <p class="price mb-3"><!-- <span class="old-price">800,000</span> --><span class="orig-price">₹ {{ $latestProduct->price }}</span></p>
-                            <h3 class="mb-0"><a href="{{ route('individualproduct', ['categoryslug' => $latestProduct->category->slug, 'id' => $latestProduct->id]) }}">{{ $latestProduct->name }}</a></h3>
+                            <h3 class="mb-0"><a href="{{ route('individualproduct', ['categoryslug' => $productslug->category->slug, 'productslug' => $latestProduct->slug]) }}">{{ $latestProduct->name }}</a></h3>
                             <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ $latestProduct->description }}</span>
                             <ul class="property_list">
                                 <li><span>Height: </span>{{ $latestProduct->height }}</li>
