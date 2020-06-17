@@ -49,7 +49,7 @@ class PagesController extends Controller
         $title = "Sarkar Gas Servicing Center";
         //return view('propertiesSingle');
         //$product = Product::findOrFail($id);
-        $product = Product::where('slug', $productslug);
+        $product = Product::where('slug', $productslug)->first();
         //dd($product);
         return view('propertiesSingle')->withProduct($product)->withTitle($title);
     }
