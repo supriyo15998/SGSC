@@ -44,11 +44,12 @@ class PagesController extends Controller
     	return view('products')->withProducts($products)->withCategories($categories)->withTitle($title);
     }
 
-    public function individualproduct($categoryslug, $id)
+    public function individualproduct($categoryslug, $productslug)
     {
         $title = "Sarkar Gas Servicing Center";
         //return view('propertiesSingle');
-        $product = Product::findOrFail($id);
+        //$product = Product::findOrFail($id);
+        $product = Product::where('slug', $productslug);
         //dd($product);
         return view('propertiesSingle')->withProduct($product)->withTitle($title);
     }

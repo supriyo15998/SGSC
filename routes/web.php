@@ -58,7 +58,7 @@ Route::get('/about-us', 'PagesController@about')->name('about');
 Route::get('/gallery', 'PagesController@gallery')->name('gallery');
 Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/products', 'PagesController@products')->name('products');
-Route::get('/product/{categoryslug}/{id}', 'PagesController@individualproduct')->name('individualproduct');
+Route::get('/product/{categoryslug}/{productslug}', 'PagesController@individualproduct')->name('individualproduct');
 Route::get('/contact-us', 'PagesController@contact')->name('contact');
 Route::post('/contact-us', 'PagesController@contactpost')->name('contactpost');
 Route::get('/quotation/{id}', 'PagesController@quotation')->name('quotation');
