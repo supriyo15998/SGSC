@@ -64,6 +64,8 @@ class HomeController extends Controller
             'image' => 'required',
             'is_Featured' => 'required'
         ]);
+        $slug = str_slug($request->name, "-");
+        $validatedData['slug'] = $slug;
         //dd($validatedData);
         $image= $request->file('image');
         $randomNum = bin2hex(random_bytes(8));

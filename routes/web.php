@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::domain('admin.sgsc.in')->group(function () {
-   Auth::routes(['register' => false]); 
+//Route::prefix('admin')->group(function() {
+    Auth::routes(['register' => false]);
    Route::get('/', function () {
        return redirect('/home');
    });
